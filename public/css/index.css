@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    left: 0;
+    top: 0;
+}
+
+h6 {
+    font-weight: normal;
+    text-align: justify;
+}
+
+p,
+h6,
+h5 {
+    color: #6a6a6a;
+}

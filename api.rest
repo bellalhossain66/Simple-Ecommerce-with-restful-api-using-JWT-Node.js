@@ -1,0 +1,120 @@
+//test server api
+GET http://localhost:4007/app
+
+###
+
+//registration api
+POST http://localhost:4007/api/admin
+Content-Type: application/json
+
+{
+    "first_name": "kkkk",
+    "last_name": "title",
+    "email": "kkkk@gmail.com",
+    "password": "kkkk"
+}
+
+###
+
+//search admin api with jwt authentication
+GET http://localhost:4007/api/admin/2
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjEsImZpcnN0X25hbWUiOiJCZWxsYWwiLCJsYXN0X25hbWUiOiJIb3NzYWluIiwiZW1haWwiOiJiZWxsYWxob3NzNjZAZ21haWwuY29tIn0sImlhdCI6MTY0OTI2MTUyMSwiZXhwIjoxNjQ5MjY1MTIxfQ.9Eox3MsJ_gmGEnRf04jLl8BIpzOxP24kaoPSidspZis
+
+###
+
+//admin login api
+POST http://localhost:4007/api/admin/login
+Content-Type: application/json
+
+{
+    "email": "bellalhoss66@gmail.com",
+    "password": "1234"
+}
+
+###
+
+//insert product to database api with jwt authentication
+POST http://localhost:4007/api/product/add-product
+Content-Type: application/json
+
+{
+    "name": "pant",
+    "price": "100.50",
+    "image": "https://bellalhossain66.github.io/assets/img/belal.jpeg"
+}
+
+###
+
+//fetch all product api with jwt authentication
+GET http://localhost:4007/api/product/get-product
+Content-Type: application/json
+
+###
+
+//delete product api with jwt authentication
+DELETE http://localhost:4007/api/product/delete-product
+Content-Type: application/json
+
+{
+    "id": "6"
+}
+
+###
+
+//search product api by id,name,price with jwt authentication
+POST http://localhost:4007/api/product/search-product/
+Content-Type: application/json
+
+{
+    "search": "pant"
+}
+
+###
+
+//product view by Id with jwt authentication
+GET http://localhost:4007/api/product/detail/4
+Content-Type: application/json
+
+###
+
+//product update api with jwt authentication
+PATCH http://localhost:4007/api/product/update-product
+Content-Type: application/json
+
+{
+    "name": "pant",
+    "price": "100.5",
+    "image": "https://bellalhossain66.github.io/assets/img/belal.jpeg",
+    "id": "1"
+}
+
+###
+
+//product fetch api for user panel
+GET http://localhost:4007/user/fetch-product
+Content-Type: application/json
+
+###
+
+//registration user api
+POST http://localhost:4007/user/create-user
+Content-Type: application/json
+
+{
+    "first_name": "Bellal",
+    "last_name": "Hossain",
+    "email": "bellalhoss66@gmail.com",
+    "password": "123"
+}
+
+###
+
+//user login api with create jwt authentication
+POST http://localhost:4007/user/login
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "test"
+}
